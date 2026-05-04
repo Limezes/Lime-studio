@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>LIME STUDIO — Игры. Софт. Код. Звук.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-<link rel="manifest" href="./site.webmanifest">
-<link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="shortcut icon" href="./favicon.ico">
     <style>
         * {
             margin: 0;
@@ -41,7 +40,6 @@
             margin: 0;
         }
 
-        /* Анимированный фон с частицами */
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -61,7 +59,6 @@
             padding: 1rem 1.5rem;
         }
 
-        /* Шапка в стиле игрового меню */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -143,7 +140,6 @@
             width: 100%;
         }
 
-        /* Бургер-меню */
         .burger-menu {
             display: none;
             flex-direction: column;
@@ -173,7 +169,6 @@
             transform: rotate(-45deg) translate(5px, -5px);
         }
 
-        /* Hero секция - уменьшены отступы */
         .hero {
             display: flex;
             flex-direction: column;
@@ -225,7 +220,6 @@
             max-width: 600px;
         }
 
-        /* Карточки основателей */
         .founders-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -442,6 +436,74 @@
             box-shadow: 0 4px 0 var(--primary-dark);
         }
 
+        /* Блок соцсетей */
+        .social-block {
+            margin: 0 0 3rem 0;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.75s;
+        }
+
+        .social-block .section-title {
+            font-size: clamp(1.8rem, 5vw, 2.2rem);
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .social-block .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .social-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.8rem;
+            background: #1a2028;
+            border-radius: 12px;
+            border: 2px solid #2d3b4a;
+            text-decoration: none;
+            color: #e3e6eb;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 0 #0a1510;
+            cursor: pointer;
+        }
+
+        .social-btn i {
+            font-size: 1.4rem;
+        }
+
+        .social-btn.yt i { color: #FF0000; }
+        .social-btn.tt i { color: #ff0050; }
+        .social-btn.tg i { color: #0088cc; }
+        .social-btn.web i { color: #3b9e7a; }
+
+        .social-btn.yt:hover { border-color: #FF0000; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(255,0,0,0.2); transform: translateY(-2px); }
+        .social-btn.tt:hover { border-color: #ff0050; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(255,0,80,0.2); transform: translateY(-2px); }
+        .social-btn.tg:hover { border-color: #0088cc; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(0,136,204,0.2); transform: translateY(-2px); }
+        .social-btn.web:hover { border-color: #3b9e7a; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(59,158,122,0.2); transform: translateY(-2px); }
+
         /* Технологический стек */
         .tech-section {
             margin: 0 0 3rem 0;
@@ -503,7 +565,6 @@
             border-color: var(--primary);
         }
 
-        /* Проект Limezes */
         .project-showcase {
             margin: 0 0 3rem 0;
             display: flex;
@@ -558,7 +619,6 @@
             text-transform: uppercase;
         }
 
-        /* Манифест */
         .manifest-block {
             background: var(--bg-card);
             padding: 2.5rem 2rem;
@@ -600,7 +660,6 @@
             font-size: 0.95rem;
         }
 
-        /* Рекрутинг блок */
         .recruit-block {
             background: linear-gradient(135deg, #14202b, #0e1720);
             padding: 2.5rem 2rem;
@@ -667,7 +726,6 @@
             font-size: 1.2rem;
         }
 
-        /* Футер */
         .footer {
             margin-top: 1rem;
             padding-top: 2rem;
@@ -699,7 +757,6 @@
             color: var(--primary);
         }
 
-        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -783,7 +840,6 @@
             color: var(--primary);
         }
 
-        /* Адаптив */
         @media (max-width: 768px) {
             .container {
                 padding: 0.5rem 1rem;
@@ -835,6 +891,15 @@
             .channel-info {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .social-grid {
+                justify-content: center;
+            }
+
+            .social-btn {
+                padding: 0.9rem 1.5rem;
+                font-size: 0.9rem;
             }
 
             .project-card {
@@ -894,6 +959,11 @@
                 width: 100%;
                 justify-content: center;
             }
+
+            .social-btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         @keyframes fadeInUp {
@@ -912,7 +982,6 @@
     <canvas id="particles-canvas"></canvas>
 
     <div class="container">
-        <!-- Навигация -->
         <nav class="navbar">
             <div class="logo">LIME STUDIO</div>
             <div class="burger-menu" onclick="toggleMenu()">
@@ -928,7 +997,6 @@
             </div>
         </nav>
 
-        <!-- Hero -->
         <section class="hero">
             <div class="pre-title">&lt;GAME DEV / SOFTWARE&gt;</div>
             <h1>ИГРЫ. СОФТ.<br>КОД. ЗВУК.</h1>
@@ -937,7 +1005,6 @@
             </div>
         </section>
 
-        <!-- Карточки основателей -->
         <div class="founders-grid">
             <div class="founder-card">
                 <div class="card-header">
@@ -1004,6 +1071,25 @@
                 </div>
                 <a href="https://t.me/limestudioteam" class="channel-button" target="_blank">
                     <i class="fab fa-telegram-plane"></i> ПОДПИСАТЬСЯ
+                </a>
+            </div>
+        </div>
+
+        <!-- Соцсети -->
+        <div class="social-block">
+            <h2 class="section-title">МЫ В СЕТИ</h2>
+            <div class="social-grid">
+                <a href="https://youtube.com/@lime-studiodev" class="social-btn yt" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a href="https://www.tiktok.com/@lime_studio_dev" class="social-btn tt" target="_blank">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://t.me/limestudioteam" class="social-btn tg" target="_blank">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+                <a href="https://limezes.github.io/Lime-studio/#" class="social-btn web" target="_blank">
+                    <i class="fas fa-globe"></i> Сайт
                 </a>
             </div>
         </div>
@@ -1113,20 +1199,18 @@
 
     <script>
         (function(){
-            // Улучшенные частицы с параллаксом от мыши/гироскопа
             const canvas = document.getElementById('particles-canvas');
             const ctx = canvas.getContext('2d');
             let particles = [];
             let animationFrame;
-            let mouseX = 0.5, mouseY = 0.5; // нормализованные координаты мыши (0..1)
+            let mouseX = 0.5, mouseY = 0.5;
             let targetMouseX = 0.5, targetMouseY = 0.5;
 
-            // Цветовая палитра частиц (зелёно-бирюзовая)
             const colors = [
-                'rgba(59, 158, 122, ',   // primary
-                'rgba(93, 173, 226, ',    // accent
-                'rgba(42, 122, 92, ',     // dark primary
-                'rgba(160, 196, 232, ',   // светлый
+                'rgba(59, 158, 122, ',
+                'rgba(93, 173, 226, ',
+                'rgba(42, 122, 92, ',
+                'rgba(160, 196, 232, ',
                 'rgba(75, 174, 138, '
             ];
 
@@ -1153,24 +1237,20 @@
                 }
             }
 
-            // Отслеживание мыши (ПК)
             function handleMouseMove(e) {
                 targetMouseX = e.clientX / window.innerWidth;
                 targetMouseY = e.clientY / window.innerHeight;
             }
 
-            // Отслеживание гироскопа (мобилки)
             function handleDeviceOrientation(e) {
                 if (e.gamma !== null && e.beta !== null) {
-                    // gamma: -90..90 (влево-вправо), beta: -180..180 (вперёд-назад)
-                    let x = (e.gamma + 90) / 180; // 0..1
+                    let x = (e.gamma + 90) / 180;
                     let y = (e.beta + 180) / 360;
                     targetMouseX = Math.min(1, Math.max(0, x));
                     targetMouseY = Math.min(1, Math.max(0, y));
                 }
             }
 
-            // Плавное следование за мышью
             function updateMouseSmoothing() {
                 mouseX += (targetMouseX - mouseX) * 0.05;
                 mouseY += (targetMouseY - mouseY) * 0.05;
@@ -1178,38 +1258,30 @@
 
             function drawParticles() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Параллакс смещение (частицы двигаются немного в противоположную сторону от мыши)
                 const offsetX = (mouseX - 0.5) * 30;
                 const offsetY = (mouseY - 0.5) * 30;
                 
                 particles.forEach(p => {
-                    // Мерцание
                     const twinkle = Math.sin(Date.now() * 0.002 + p.phase) * 0.1 + 0.9;
                     const opacity = p.opacityBase * twinkle;
                     
-                    // Основное хаотичное движение
                     p.x += p.speedX;
                     p.y += p.speedY;
                     
-                    // Зацикливание по краям
                     if (p.x < -20) p.x = canvas.width + 20;
                     if (p.x > canvas.width + 20) p.x = -20;
                     if (p.y < -20) p.y = canvas.height + 20;
                     if (p.y > canvas.height + 20) p.y = -20;
                     
-                    // Применяем параллакс (частицы как будто плывут за мышью)
                     const parallaxX = p.x + offsetX * (p.size * 0.3);
                     const parallaxY = p.y + offsetY * (p.size * 0.3);
                     
-                    // Рисуем
                     const color = colors[p.colorIndex] + opacity + ')';
                     ctx.fillStyle = color;
                     ctx.beginPath();
                     ctx.arc(parallaxX, parallaxY, p.size * (0.8 + 0.2 * twinkle), 0, Math.PI * 2);
                     ctx.fill();
                     
-                    // Добавляем свечение для крупных частиц
                     if (p.size > 3) {
                         ctx.shadowColor = 'rgba(59, 158, 122, 0.5)';
                         ctx.shadowBlur = 10;
@@ -1222,23 +1294,19 @@
                 animationFrame = requestAnimationFrame(drawParticles);
             }
 
-            // Инициализация отслеживания
             window.addEventListener('mousemove', handleMouseMove);
             window.addEventListener('deviceorientation', handleDeviceOrientation);
             window.addEventListener('resize', resizeCanvas);
             
-            // Запуск
             resizeCanvas();
             drawParticles();
 
-            // Очистка
             window.addEventListener('beforeunload', () => {
                 if (animationFrame) cancelAnimationFrame(animationFrame);
                 window.removeEventListener('mousemove', handleMouseMove);
                 window.removeEventListener('deviceorientation', handleDeviceOrientation);
             });
 
-            // Меню и скролл
             window.toggleMenu = function() {
                 const nav = document.getElementById('navLinks');
                 const burger = document.querySelector('.burger-menu');
@@ -1262,7 +1330,6 @@
                 if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             };
 
-            // Модалка
             window.showProjectModal = function() {
                 document.getElementById('projectModal').classList.add('active');
                 document.body.style.overflow = 'hidden';
