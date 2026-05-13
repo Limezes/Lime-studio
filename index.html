@@ -236,14 +236,13 @@
             transition: all 0.3s ease;
             opacity: 0;
             animation: fadeInUp 0.8s ease forwards;
-            animation-delay: 0.2s;
             position: relative;
             overflow: hidden;
         }
 
-        .founder-card:nth-child(2) {
-            animation-delay: 0.4s;
-        }
+        .founder-card:nth-child(1) { animation-delay: 0.2s; }
+        .founder-card:nth-child(2) { animation-delay: 0.4s; }
+        .founder-card:nth-child(3) { animation-delay: 0.6s; }
 
         .founder-card::before {
             content: '';
@@ -353,7 +352,6 @@
             border-color: var(--accent);
         }
 
-        /* Блок канала студии */
         .studio-channel-block {
             margin: 0 0 3rem 0;
             opacity: 0;
@@ -436,7 +434,6 @@
             box-shadow: 0 4px 0 var(--primary-dark);
         }
 
-        /* Блок соцсетей */
         .social-block {
             margin: 0 0 3rem 0;
             opacity: 0;
@@ -498,13 +495,14 @@
         .social-btn.tt i { color: #ff0050; }
         .social-btn.tg i { color: #0088cc; }
         .social-btn.web i { color: #3b9e7a; }
+        .social-btn.gh i { color: #8b949e; }
 
         .social-btn.yt:hover { border-color: #FF0000; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(255,0,0,0.2); transform: translateY(-2px); }
         .social-btn.tt:hover { border-color: #ff0050; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(255,0,80,0.2); transform: translateY(-2px); }
         .social-btn.tg:hover { border-color: #0088cc; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(0,136,204,0.2); transform: translateY(-2px); }
         .social-btn.web:hover { border-color: #3b9e7a; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(59,158,122,0.2); transform: translateY(-2px); }
+        .social-btn.gh:hover { border-color: #8b949e; box-shadow: 0 6px 0 #0a1510, 0 0 20px rgba(139,148,158,0.2); transform: translateY(-2px); }
 
-        /* Технологический стек */
         .tech-section {
             margin: 0 0 3rem 0;
             opacity: 0;
@@ -1006,12 +1004,16 @@
         </section>
 
         <div class="founders-grid">
+            <!-- LIME -->
             <div class="founder-card">
                 <div class="card-header">
                     <div class="card-icon"><i class="fas fa-code"></i></div>
                     <div class="card-links">
                         <a href="https://t.me/telegalayma" class="card-link" target="_blank" title="Блог LIME">
                             <i class="fas fa-pencil-alt"></i>
+                        </a>
+                        <a href="https://github.com/Limezes" class="card-link" target="_blank" title="GitHub LIME">
+                            <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
@@ -1031,6 +1033,7 @@
                 </div>
             </div>
 
+            <!-- NEIROX -->
             <div class="founder-card">
                 <div class="card-header">
                     <div class="card-icon"><i class="fas fa-headphones-alt"></i></div>
@@ -1051,6 +1054,32 @@
                         <i class="fab fa-telegram-plane"></i> @NEIROXhtml
                     </a>
                     <a href="https://t.me/BredBredBredB" class="telegram-link" target="_blank">
+                        <i class="fas fa-pencil-alt"></i> Блог
+                    </a>
+                </div>
+            </div>
+
+            <!-- MINEGAMES -->
+            <div class="founder-card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-bug"></i></div>
+                    <div class="card-links">
+                        <a href="https://t.me/minegames635" class="card-link" target="_blank" title="Блог MINEGAMES">
+                            <i class="fas fa-pencil-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="founder-role">TESTER & FIRST PLAYER</div>
+                <div class="founder-name">MINEGAMES</div>
+                <div class="founder-desc">
+                    Ломает всё, до чего дотягивается.<br>
+                    Находит баги там, где их быть не должно. Спасает релизы.
+                </div>
+                <div class="telegram-links">
+                    <a href="https://t.me/Mine635" class="telegram-link" target="_blank">
+                        <i class="fab fa-telegram-plane"></i> @Mine635
+                    </a>
+                    <a href="https://t.me/minegames635" class="telegram-link" target="_blank">
                         <i class="fas fa-pencil-alt"></i> Блог
                     </a>
                 </div>
@@ -1087,6 +1116,9 @@
                 </a>
                 <a href="https://t.me/limestudioteam" class="social-btn tg" target="_blank">
                     <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+                <a href="https://github.com/Limezes" class="social-btn gh" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
                 </a>
                 <a href="https://limezes.github.io/Lime-studio/#" class="social-btn web" target="_blank">
                     <i class="fas fa-globe"></i> Сайт
@@ -1162,6 +1194,7 @@
             <div>© 2026 LIME STUDIO. ALL RIGHTS RESERVED.</div>
             <div class="footer-links">
                 <a href="https://t.me/limestudioteam" target="_blank">КАНАЛ СТУДИИ</a>
+                <a href="https://github.com/Limezes" target="_blank">GITHUB</a>
                 <a href="https://t.me/Maxim_Lime" target="_blank">@Maxim_Lime</a>
                 <a href="https://t.me/NEIROXhtml" target="_blank">@NEIROXhtml</a>
                 <a href="https://t.me/Lime_Help" target="_blank">@Lime_Help</a>
